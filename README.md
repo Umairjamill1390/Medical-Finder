@@ -65,4 +65,4 @@ This section would link to the website's terms of service, which would outline t
 
 ### Social Media Links
 
-This section would include links to the website's social media pages, so that users could follow the website on social media for updates and announcements.
+This section wou# Medical-Finder
