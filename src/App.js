@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import Search from './components/Search';
+// ... import other sections
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const handleSearch = (query) => {
+        // Here, you would typically make an API call to get search results
+        console.log("Searching for:", query);
+    };
+
+    return (
+        <div>
+            <NavBar />
+            {/* You can add routing or conditional rendering to load specific sections */}
+            <Search onSearch={handleSearch} />
+            {/* ... other sections */}
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

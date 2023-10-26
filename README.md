@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Medical Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Find hospitals, medications, and pharmacies near you with ease.
 
-## Available Scripts
+Our website makes it easy to find the healthcare services you need, when and where you need them. With our simple search tools, you can find hospitals, medications, and pharmacies near you, as well as filter your results by insurance coverage, specialty, and other criteria.
 
-In the project directory, you can run:
+We also provide detailed information on each hospital, medication, and pharmacy, including contact information, hours of operation, and reviews from other users. This makes it easy to compare your options and choose the best healthcare provider for your needs.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Find hospitals, medications, and pharmacies near you
+- Filter results by insurance coverage, specialty, and other criteria
+- View detailed information on each hospital, medication, and pharmacy
+- Read reviews from other users
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Benefits
 
-### `npm test`
+- Save time and hassle by finding the healthcare services you need quickly and easily
+- Make informed decisions about your healthcare by comparing your options and reading reviews
+- Get the best possible healthcare experience by choosing the best healthcare providers for your needs
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# NavBar Contents 
 
-### `npm run build`
+Contains links to main application features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Home 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This tab would take users to the landing page, where they could learn more about the website and its features.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Find A Hospital
 
-### `npm run eject`
+This tab would take users to a page where they could search for hospitals near them or based on specific criteria, such as location, specialty, or insurance coverage.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Find A Medication
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This tab would take users to a page where they could search for medications near them or based on specific criteria, such as the medication name, dosage form, or insurance coverage.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Find a pharmacy
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This tab would take users to a page where they could search for pharmacies near them or based on specific criteria, such as the pharmacy name, location, or insurance coverage.
 
-## Learn More
+### Resources
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This tab would take users to a page with resources on a variety of health-related topics, such as disease information, medication guides, and healthy living tips.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Footer content
 
-### Code Splitting
+Contains links to Resources, Policies and Contacts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### About Us
 
-### Analyzing the Bundle Size
+This section would provide more information about the website, its mission, and its team.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Contact Us
 
-### Making a Progressive Web App
+This section would provide contact information for the website, so that users could get in touch with the team with any questions or feedback.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Privacy Policy
 
-### Advanced Configuration
+This section would link to the website's privacy policy, which would explain how the website collects and uses user data.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Terms Of Service 
 
-### Deployment
+This section would link to the website's terms of service, which would outline the terms and conditions of using the website.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Social Media Links
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section would include links to the website's social media pages, so that users could follow the website on social media for updates and announcements.
