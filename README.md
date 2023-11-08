@@ -23,10 +23,6 @@ We also provide detailed information on each hospital, medication, and pharmacy,
 
 Contains links to main application features
 
-### Home 
-
-This tab would take users to the landing page, where they could learn more about the website and its features.
-
 ### Find A Hospital
 
 This tab would take users to a page where they could search for hospitals near them or based on specific criteria, such as location, specialty, or insurance coverage.
@@ -42,6 +38,11 @@ This tab would take users to a page where they could search for pharmacies near 
 ### Resources
 
 This tab would take users to a page with resources on a variety of health-related topics, such as disease information, medication guides, and healthy living tips.
+
+### Sign In
+
+This tab will allow user to sign in and sign up. It will make searching recent products easier and give better suggestions. 
+
 
 # Footer content
 
