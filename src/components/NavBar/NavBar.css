@@ -1,0 +1,22 @@
+/* Setting navbar to default colors  */
+.navbar-custom .navbar-nav .nav-item .nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-custom .navbar-nav .nav-link:hover {
+    color: crimson;
+  }
+  
+  .navbar-custom.sticky-top {
+    z-index: 1020;
+  }
+
+  .navbar-custom {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-custom.scrolled {
+    background-color: rgb(171, 230, 176); 
+  }
