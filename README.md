@@ -19,6 +19,26 @@ We also provide detailed information on each hospital, medication, and pharmacy,
 - Make informed decisions about your healthcare by comparing your options and reading reviews
 - Get the best possible healthcare experience by choosing the best healthcare providers for your needs
 
+## Build Instructions
+
+1. Clone this repo using:
+  ```shell
+  $ git clone https://github.com/Umairjamill1390/Medical-Finder.git
+  ```
+
+2. To install dependencies and clean the git repo run:
+
+  ```shell
+  $ npm install
+  ```
+
+5. Run project
+
+  ```shell
+  $ npm start
+  ```
+
+
 # NavBar Contents 
 
 Contains links to main application features
