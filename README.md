@@ -63,7 +63,3 @@ This section would link to the website's privacy policy, which would explain how
 ### Terms Of Service 
 
 This section would link to the website's terms of service, which would outline the terms and conditions of using the website.
-
-### Social Media Links
-
-This section wou# Medical-Finder
