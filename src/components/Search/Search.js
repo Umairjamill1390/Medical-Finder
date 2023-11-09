@@ -1,9 +1,8 @@
 // src/components/Search/Search.js
 
 import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Button, InputGroup, FormControl, DropdownButton, Dropdown } from 'react-bootstrap';
-import { onSearch } from './services/HospitalService/HospitalService'; // Import the onSearch function
+import { onSearch } from '../../Services/HospitalService/HospitalService'; // Import the onSearch function
 
 function Search({ setHospitals }) {
     const [query, setQuery] = useState("");
