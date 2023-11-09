@@ -26,7 +26,7 @@ We also provide detailed information on each hospital, medication, and pharmacy,
   $ git clone https://github.com/Umairjamill1390/Medical-Finder.git
   ```
 
-2. To install dependencies and clean the git repo run:
+2. To install dependencies run:
 
   ```shell
   $ npm install
