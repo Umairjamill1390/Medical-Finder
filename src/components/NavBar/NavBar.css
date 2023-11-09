@@ -17,6 +17,6 @@
     transition: background-color 0.3s ease;
   }
   
-  .navbar-custom.scrolled {
-    background-color: rgb(171, 230, 176); 
-  }
+.navbar-custom.not-at-top {
+    background-color: rgb(171, 230, 176); /* Chosen color when not at top */
+}
