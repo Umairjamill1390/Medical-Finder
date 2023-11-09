@@ -1,8 +1,9 @@
 import React from 'react';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
-import Search from './components/Search';
+import Search from './components/Search/Search';
+import './App.css';
 
 
 function App() {
