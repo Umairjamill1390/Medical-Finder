@@ -64,8 +64,7 @@ With all the dependencies installed, you can now start the project. In the root 
   ```
 
 ---
----
----
+
 # NavBar Contents 
 
 Contains links to main application features
