@@ -22,6 +22,7 @@ We also provide detailed information on each hospital, medication, and pharmacy,
 ## Build Instructions
 
 1. Clone this repo using:
+
   ```shell
   $ git clone https://github.com/Umairjamill1390/Medical-Finder.git
   ```
@@ -32,7 +33,19 @@ We also provide detailed information on each hospital, medication, and pharmacy,
   $ npm install
   ```
 
-5. Run project
+  Navigate to root directory to install Bootstrap
+
+  ```shell
+  $ npm install bootstrap
+  ```
+  
+  Navigate to root directory to install React-Bootstrap
+
+  ```shell
+  $ npm install react-bootstrap
+  ```
+
+3. Run project:
 
   ```shell
   $ npm start
