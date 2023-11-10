@@ -19,26 +19,55 @@ We also provide detailed information on each hospital, medication, and pharmacy,
 - Make informed decisions about your healthcare by comparing your options and reading reviews
 - Get the best possible healthcare experience by choosing the best healthcare providers for your needs
 
-## Build Instructions
+---
+---
+---
 
-1. Clone this repo using:
+# Environment Build Instructions
+
+### Step 1: Clone the Repository
+To clone the Medical Finder repository to your local machine, open your terminal and execute the following command:
+
   ```shell
-  $ git clone https://github.com/Umairjamill1390/Medical-Finder.git
-  ```
+  git clone https://github.com/Umairjamill1390/Medical-Finder.git
+  ``` 
 
-2. To install dependencies run:
+This will create a local copy of the Medical Finder project on your computer.
+
+### Step 2: Install Dependencies
+Once the repository is cloned, navigate to the project's root directory in your terminal. The next step is to install various dependencies required for the project.
+
+#### a. Install Project Dependencies
+Run the following command to install the dependencies specified in the package.json file:
 
   ```shell
   $ npm install
   ```
 
-5. Run project
+#### b. Install Bootstrap
+Bootstrap, a widely-used CSS framework, is essential for designing responsive web pages. Install it using the command:
+
+  ```shell
+  $ npm install bootstrap
+  ```
+
+#### c. Install React-Bootstrap
+React-Bootstrap offers Bootstrap components as React components, facilitating the integration of Bootstrap within React applications. To install, run:
+
+  ```shell
+  $ npm install react-bootstrap
+  ```
+
+### Step 3: Run the Project
+With all the dependencies installed, you can now start the project. In the root directory of the project, execute the command:
 
   ```shell
   $ npm start
   ```
 
-
+---
+---
+---
 # NavBar Contents 
 
 Contains links to main application features
@@ -63,6 +92,7 @@ This tab would take users to a page with resources on a variety of health-relate
 
 This tab will allow user to sign in and sign up. It will make searching recent products easier and give better suggestions. 
 
+---
 
 # Footer content
 
