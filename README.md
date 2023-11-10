@@ -20,8 +20,6 @@ We also provide detailed information on each hospital, medication, and pharmacy,
 - Get the best possible healthcare experience by choosing the best healthcare providers for your needs
 
 ---
----
----
 
 # Environment Build Instructions
 
