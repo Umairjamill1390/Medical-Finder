@@ -19,7 +19,29 @@ We also provide detailed information on each hospital, medication, and pharmacy,
 - Make informed decisions about your healthcare by comparing your options and reading reviews
 - Get the best possible healthcare experience by choosing the best healthcare providers for your needs
 
-## Build Instructions
+# Build Instructions for Medical Finder
+
+## Step 1: Clone the Repository
+To clone the Medical Finder repository to your local machine, open your terminal and execute the following command:
+
+  ```shell
+  git clone https://github.com/Umairjamill1390/Medical-Finder.git
+  ``` 
+
+This will create a local copy of the Medical Finder project on your computer.
+
+## Step 2: Install Dependencies
+Once the repository is cloned, navigate to the project's root directory in your terminal. The next step is to install various dependencies required for the project.
+
+### Install Project Dependencies
+Run the following command to install the dependencies specified in the package.json file:
+
+  ```shell
+  $ npm install
+  ```
+
+
+<!-- ## Build Instructions
 
 1. Clone this repo using:
 
@@ -49,7 +71,7 @@ We also provide detailed information on each hospital, medication, and pharmacy,
 
   ```shell
   $ npm start
-  ```
+  ``` -->
 
 
 # NavBar Contents 
