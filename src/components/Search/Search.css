@@ -1,0 +1,40 @@
+.search-input-group {
+    border: 2px solid transparent;
+    background-color: transparent;
+    border-radius: 25px; 
+    max-width: 600px; 
+    width: 100%; 
+    margin: 0 auto; 
+}
+.search-input-group .form-control {
+    font-size: 1.25rem; 
+    padding: 10px 20px;
+    background-color: whitesmoke;
+    border: none; 
+    border-radius: 25px 0 0 25px; 
+}
+.search-input-group .input-group-text {
+    background-color: whitesmoke; 
+    border: none; 
+    border-radius: 0 25px 25px 0; 
+}
+.search-input:focus, .search-input-group .input-group-text:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.bi-search {
+    font-size: 1.25rem; 
+    vertical-align: middle; 
+    cursor: pointer; 
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.loading-indicator {
+    text-align: center;
+    margin-top: 10px;
+}

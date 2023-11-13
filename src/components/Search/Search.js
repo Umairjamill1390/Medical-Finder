@@ -1,45 +1,56 @@
 // src/components/Search/Search.js
 
 import React, { useState } from 'react';
-import { Form, Button, InputGroup, FormControl, DropdownButton, Dropdown } from 'react-bootstrap';
-import { onSearch } from '../../Services/HospitalService/HospitalService'; // Import the onSearch function
+import { Form, Button, InputGroup, FormControl, DropdownButton, Dropdown, Col } from 'react-bootstrap';
+import { BiSearch } from 'react-icons/bi';
+import { onSearch } from '../../Services/HospitalService/HospitalService';
+import './Search.css';
 
 function Search({ setHospitals }) {
     const [query, setQuery] = useState("");
-    const [distance, setDistance] = useState("5"); // Default distance
+    const [distance, setDistance] = useState("5");
+    const [errorMessage, setErrorMessage] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+    const isValidZipCode = (zipCode) => {
+        return /^\d{5}$/.test(zipCode);
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setHospitals([]);
+    
+        if (!isValidZipCode(query)) {
+            setErrorMessage('Please enter a valid 5-digit zip code.');
+            return;
+        }
+        setErrorMessage('');
+    
         try {
+            setIsLoading(true);
             const hospitals = await onSearch(query, distance);
-            setHospitals(hospitals); // Assuming you have a state in the parent component to store the hospitals data
+            setHospitals(hospitals); 
+            setIsLoading(false);
         } catch (error) {
             console.error("Failed to fetch hospitals:", error);
-            // Handle the error appropriately
+            setErrorMessage("Error fetching hospitals."); // Display error message
         }
     }
 
     return (
-        <Form onSubmit={handleSubmit}>
-            <InputGroup className="mb-3">
+        <Form onSubmit={handleSubmit} className="mb-4">
+            <InputGroup className="mb-3 search-input-group">
                 <FormControl
                     placeholder="Enter zip code or address..."
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
+                    className="search-input"
                 />
-                <DropdownButton
-                    variant="outline-secondary"
-                    title={`Distance: ${distance} miles`}
-                    id="input-group-dropdown-2"
-                    align="end"
-                >
-                    <Dropdown.Item onClick={() => setDistance("5")}>5 miles</Dropdown.Item>
-                    <Dropdown.Item onClick={() => setDistance("10")}>10 miles</Dropdown.Item>
-                    <Dropdown.Item onClick={() => setDistance("25")}>25 miles</Dropdown.Item>
-                    <Dropdown.Item onClick={() => setDistance("50")}>50 miles</Dropdown.Item>
-                </DropdownButton>
-                <Button variant="primary" type="submit">Search</Button>
+                <InputGroup.Text>
+                    <BiSearch onClick={handleSubmit} style={{ cursor: 'pointer' }} /> {/* Search icon */}
+                </InputGroup.Text>
             </InputGroup>
+            {errorMessage && <div className="error-message">{errorMessage}</div>}
+            {isLoading && <div className="loading-indicator">Loading...</div>}
         </Form>
     );
 }

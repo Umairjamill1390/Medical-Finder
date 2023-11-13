@@ -1,1 +1,18 @@
-
+.title-section h1{
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 4rem;
+    font-weight: 500; /* Less bold than 'bold', adjust as needed */
+    color: #000000;
+    letter-spacing: 0.15em; /* Increase spacing between letters */
+    padding: 0rem 2rem 2rem;
+}
+.title-section h3{
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.10em;
+    padding: 0rem 10rem 7rem;
+}
+.rounded-container {
+    border-radius: 15px;
+    padding: 30px 40px;
+}
