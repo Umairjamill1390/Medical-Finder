@@ -22,7 +22,7 @@ function NavBar() {
 
     return (
         <nav className={`navbar navbar-expand-lg navbar-light sticky-top navbar-custom ps-3 ${isAtPageTop ? '' : 'not-at-top'}`}>
-            <a className="navbar-brand" href="/">Medical Finder</a>
+            <a className="navbar-brand" href="/">HealthiCompass</a>
             <button 
                 className="navbar-toggler" 
                 type="button" 
@@ -36,7 +36,6 @@ function NavBar() {
             </button>
             <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
-                    <a className="nav-item nav-link" href="/">Home</a>
                     <a className="nav-item nav-link" href="/find-a-hospital">Find a hospital</a>
                     <a className="nav-item nav-link" href="/find-a-medication">Find a Medication</a>
                     <a className="nav-item nav-link" href="/find-a-pharmacy">Find a pharmacy</a>
