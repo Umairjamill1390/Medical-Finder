@@ -9,10 +9,10 @@
     align-items: center;
     justify-content: center;
     flex: 0 0 calc(33% - 20px);
-    height: 200px; /* Adjust as needed */
-  }
-  
-  .background-image {
+    height: 200px;
+}
+
+.background-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -20,44 +20,53 @@
     bottom: 0;
     background-size: cover;
     background-position: center;
-    filter: blur(2px);
-    transition: filter 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     border-radius: 10px;
-  }
-  
-  .hospital-card:hover .background-image {
-    filter: blur(0);
-  }
-  
-  .card-content {
+    transform: scale(1.0);
+    z-index: 0;
+}
+
+.hospital-card:hover .background-image {
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+
+.card-content {
     position: absolute;
     color: white;
     text-align: center;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
     width: 100%;
-    z-index: 1; /* Ensures the text is above the background */
-  }
-  
-  .hospital-name {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Dark overlay for text readability */
+    transition: background-color 0.3s ease;
+}
+
+.hospital-card:hover .card-content {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: crimson;
+    /* Lighter overlay on hover */
+}
+
+.hospital-name {
     font-weight: bold;
     font-size: 1.2em;
     margin-bottom: 5px;
-  }
-  
-  .hospital-distance {
+}
+
+.hospital-distance {
     font-size: 1em;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .hospital-card {
-      flex: 0 0 calc(50% - 20px);
+        flex: 0 0 calc(50% - 20px);
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .hospital-card {
-      flex: 0 0 calc(100% - 20px);
+        flex: 0 0 calc(100% - 20px);
     }
-  }
-  
+}
