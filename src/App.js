@@ -3,17 +3,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 import Search from './components/Search/Search';
-import HospitalCard from './components/HospitalCard/HospitalCard'; // Import HospitalCard
+import HospitalCard from './components/HospitalCard/HospitalCard';
+import MedicareHospitals from './components/MedicareHospitals/MedicareHospitals';
 import './App.css';
 
 
 function App() {
     const [hospitals, setHospitals] = useState([]);
-    const handleSearch = (query) => {
-        // Here I need to add an API call to get search results
-        console.log("Searching for:", query);
-    };
-
+    const [zipCode, setZipCode] = useState("");
+    // console.log("Hospitals data from my APP baby:", hospitals);
     return (
         <div>
             <NavBar />
@@ -24,12 +22,14 @@ function App() {
                     <h1>Find your hospital and medical supplies</h1>
                     <h3>Leave all the work to us. Just type your need and we will figure out the rest!</h3>
                     <div className="container">
-                        <Search setHospitals={setHospitals} />
-                        <div className="hospital-list" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
-                            {hospitals.map((hospital, index) => (
-                            <HospitalCard key={index} hospital={hospital} />
+                        <Search setHospitals={setHospitals} setZipCode={setZipCode} />
+                        <div className="hospital-list">
+                            {hospitals && hospitals.map((hospital, index) => (
+                                <HospitalCard key={index} hospital={hospital} />
                             ))}
                         </div>
+                        {/* Pass zipCode to MedicareHospitals */}
+                        <MedicareHospitals zipCode={zipCode} />
                     </div>
                 </div>
 

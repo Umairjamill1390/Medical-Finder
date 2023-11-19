@@ -2,7 +2,7 @@
 
 import React from 'react';
 import './HospitalCard.css';
-import defaultImage from '../../Assets/hospital-default.png'; // Adjust the path as necessary
+import defaultImage from '../../Assets/hospital-default.png';
 
 function HospitalCard({ hospital }) {
   const openInGoogleMaps = () => {
