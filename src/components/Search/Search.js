@@ -1,14 +1,14 @@
 // src/components/Search/Search.js
 
 import React, { useState } from 'react';
-import { Form, Button, InputGroup, FormControl, DropdownButton, Dropdown, Col } from 'react-bootstrap';
+import { Form, InputGroup, FormControl } from 'react-bootstrap';
 import { BiSearch } from 'react-icons/bi';
 import { onSearch } from '../../Services/HospitalService/HospitalService';
 import './Search.css';
 
-function Search({ setHospitals }) {
+function Search({ setHospitals, setZipCode }) {
     const [query, setQuery] = useState("");
-    const [distance, setDistance] = useState("5");
+    const [distance] = useState("5");
     const [errorMessage, setErrorMessage] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const isValidZipCode = (zipCode) => {
@@ -17,22 +17,30 @@ function Search({ setHospitals }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setHospitals([]);
-    
         if (!isValidZipCode(query)) {
             setErrorMessage('Please enter a valid 5-digit zip code.');
             return;
         }
-        setErrorMessage('');
-    
+        // Set the zip code in App.js state
+        setZipCode(query);
+
         try {
             setIsLoading(true);
             const hospitals = await onSearch(query, distance);
-            setHospitals(hospitals); 
-            setIsLoading(false);
+    
+            // Check if the hospitals array is empty
+            if (hospitals.length === 0) {
+                setErrorMessage("No hospitals found in this area.");
+                setHospitals([]);
+            } else {
+                setHospitals(hospitals);
+                setErrorMessage(""); // Clear any existing error messages
+            }
         } catch (error) {
-            console.error("Failed to fetch hospitals:", error);
-            setErrorMessage("Error fetching hospitals."); // Display error message
+            console.error("Search Error:", error);
+            setErrorMessage("Error fetching hospitals. Please try again.");
+        } finally {
+            setIsLoading(false);
         }
     }
 
