@@ -1,3 +1,5 @@
+// src/components/SignInButton/SignInButton.js
+
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './SignInButton.css'; 

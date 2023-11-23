@@ -1,3 +1,5 @@
+// src/components/NavBar/NavBar.js
+
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SignInButton from '../SignInButton/SignInButton'; 

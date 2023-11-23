@@ -3,12 +3,12 @@
 import React, { useState } from 'react';
 import { Form, InputGroup, FormControl } from 'react-bootstrap';
 import { BiSearch } from 'react-icons/bi';
-import { onSearch } from '../../Services/HospitalService/HospitalService';
+import { fetchHospitalsNearby } from '../../Services/HospitalService/HospitalService';
 import './Search.css';
 
 function Search({ setHospitals, setZipCode }) {
-    const [query, setQuery] = useState("");
-    const [distance] = useState("5");
+    const [zipCodeQuery, setQuery] = useState("");
+    const [searchRadius] = useState("5");
     const [errorMessage, setErrorMessage] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const isValidZipCode = (zipCode) => {
@@ -17,39 +17,43 @@ function Search({ setHospitals, setZipCode }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!isValidZipCode(query)) {
+        if (!isValidZipCode(zipCodeQuery)) {
             setErrorMessage('Please enter a valid 5-digit zip code.');
             return;
         }
         // Set the zip code in App.js state
-        setZipCode(query);
-
+        setZipCode(zipCodeQuery);
+    
         try {
             setIsLoading(true);
-            const hospitals = await onSearch(query, distance);
+            const hospitals = await fetchHospitalsNearby(zipCodeQuery, searchRadius);
     
-            // Check if the hospitals array is empty
             if (hospitals.length === 0) {
-                setErrorMessage("No hospitals found in this area.");
+                setErrorMessage("No hospitals found in this area. Please try a different ZIP code.");
                 setHospitals([]);
             } else {
                 setHospitals(hospitals);
-                setErrorMessage(""); // Clear any existing error messages
+                setErrorMessage("");
             }
         } catch (error) {
             console.error("Search Error:", error);
-            setErrorMessage("Error fetching hospitals. Please try again.");
+            if (error.message.includes('No coordinates found for this zip code')) {
+                setErrorMessage("No hospitals found in this area. Please try a different ZIP code.");
+            } else {
+                setErrorMessage("Error fetching hospitals. Please try again.");
+            }
         } finally {
             setIsLoading(false);
         }
     }
+    
 
     return (
         <Form onSubmit={handleSubmit} className="mb-4">
             <InputGroup className="mb-3 search-input-group">
                 <FormControl
                     placeholder="Enter zip code or address..."
-                    value={query}
+                    value={zipCodeQuery}
                     onChange={(e) => setQuery(e.target.value)}
                     className="search-input"
                 />

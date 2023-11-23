@@ -1,3 +1,5 @@
+// src/App.js
+
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
@@ -11,7 +13,6 @@ import './App.css';
 function App() {
     const [hospitals, setHospitals] = useState([]);
     const [zipCode, setZipCode] = useState("");
-    // console.log("Hospitals data from my APP baby:", hospitals);
     return (
         <div>
             <NavBar />
@@ -28,7 +29,6 @@ function App() {
                                 <HospitalCard key={index} hospital={hospital} />
                             ))}
                         </div>
-                        {/* Pass zipCode to MedicareHospitals */}
                         <MedicareHospitals zipCode={zipCode} />
                     </div>
                 </div>

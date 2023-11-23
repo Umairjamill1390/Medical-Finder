@@ -1,4 +1,4 @@
-// src/utils/utils.js
+// src/Utils/Utils.js
 
 // Haversine Formula
 export function calculateDistance(lat1, lon1, lat2, lon2) {

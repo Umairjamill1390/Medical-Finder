@@ -1,3 +1,5 @@
+// src/components/Footer/Footer.js
+
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Footer.css';

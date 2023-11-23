@@ -1,11 +1,4 @@
-/* src/components/HospitalCard/HospitalCard.css */
-
-.hospital-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: stretch;
-}
+/* src/components/MedicareHospitals/MedicareHospitals.css */
 
 .hospital-card {
     position: relative;
@@ -15,10 +8,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 calc(33.33% - 20px);
-    margin: 10px;
-    height: 200px;
-    cursor: pointer;
+    flex: 0 0 calc(33% - 20px);
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .background-image {
@@ -27,10 +21,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    border-radius: 10px;
     transform: scale(1.0);
     z-index: 0;
 }
@@ -52,15 +42,15 @@
 }
 
 .hospital-card:hover .card-content {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .hospital-card:hover .hospital-name {
     color: crimson;
 }
 
-.hospital-card:hover .hospital-distance {
-    color: white; /* Ensure distance stays white on hover */
+.hospital-card:hover .hospital-detail {
+    color: white; /* Ensure details stay white on hover */
 }
 
 .hospital-name {
@@ -69,8 +59,9 @@
     margin-bottom: 5px;
 }
 
-.hospital-distance {
-    font-size: 1em;
+.hospital-detail {
+    font-size: 0.9em;
+    margin: 5px 0;
 }
 
 @media (max-width: 768px) {
@@ -81,6 +72,6 @@
 
 @media (max-width: 480px) {
     .hospital-card {
-        flex: 0 0 100%;
+        flex: 0 0 calc(100% - 20px);
     }
 }
