@@ -1,4 +1,5 @@
-/* Setting navbar to default colors  */
+/* src/components/NavBar/NavBar.css */
+
 .navbar-custom .navbar-nav .nav-item .nav-link {
     position: relative;
     transition: color 0.3s ease;

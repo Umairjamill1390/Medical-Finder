@@ -1,3 +1,5 @@
+/* src/components/SignInButton/SignInButton.css */
+
 .sign-in-btn {
     transition: background-color 0.3s ease; /* Smooth transition for the hover effect */
 }

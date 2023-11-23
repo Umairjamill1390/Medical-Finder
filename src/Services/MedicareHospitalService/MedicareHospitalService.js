@@ -1,20 +1,17 @@
-// MedicareHospitalService.js
+// ./src/Services/MedicareHospitalService/MedicareHospitalService.js
 
-// Import axios or fetch
 import axios from 'axios';
 
-const API_URL = 'https://data.cms.gov/data-api/v1/dataset/f6f6505c-e8b0-4d57-b258-e2b94133aaf2/data';
+const MEDICARE_API_URL = 'https://data.cms.gov/data-api/v1/dataset/f6f6505c-e8b0-4d57-b258-e2b94133aaf2/data';
 
 const MedicareHospitalService = {
     getHospitalsByZip: async (zipCode) => {
         try {
-            const response = await axios.get(API_URL);
+            const response = await axios.get(MEDICARE_API_URL);
             if (response.status === 200) {
-                console.log("Raw API Response:", response.data); // Log the raw API response
                 const filteredData = response.data
                     .filter(hospital => {
                         const apiZip = hospital['ZIP CODE'].substring(0, 5);
-                        console.log(`API ZIP: ${apiZip}, User ZIP: ${zipCode}`); // Log ZIP comparison
                         return apiZip === zipCode;
                     })
                     .map(hospital => ({
@@ -28,9 +25,7 @@ const MedicareHospitalService = {
                         childrenHospital: hospital['SUBGROUP - CHILDRENS'] === 'Y',
                         psychiatricHospital: hospital['SUBGROUP - PSYCHIATRIC'] === 'Y',
                         rehabilitationHospital: hospital['SUBGROUP - REHABILITATION'] === 'Y',
-                        // Add any other fields you need
                     }));
-                console.log("Filtered Data:", filteredData); // Log the filtered data
                 return filteredData;
             } else {
                 throw new Error('Failed to fetch data');

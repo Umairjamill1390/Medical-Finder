@@ -1,5 +1,7 @@
+// ./src/Services/CMSServices/CMSServices.js
 const CMS_API_BASE_URL = 'https://data.cms.gov/provider-data/api/1/datastore/sql';
-blabalbalbalbaabl
+
+
 // Function to fetch data from CMS API based on a query
 export const fetchDataFromCMS = async (query) => {
     const url = `${CMS_API_BASE_URL}?query=${encodeURIComponent(query)}&show_db_columns`;
@@ -12,6 +14,7 @@ export const fetchDataFromCMS = async (query) => {
     const data = await response.json();
     return data; // Adjust based on actual response format
 };
+
 
 // Function to get detailed hospital data based on ZIP code
 export const getDetailedHospitalData = async (zipCode) => {
